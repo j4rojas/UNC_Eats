@@ -1,0 +1,23 @@
+header {
+    background-color: #99BADD;
+    block-size:55px;
+    color: white;
+}
+
+button {
+    float:right;
+    width:8%;
+    margin: -3.6% 12%;
+    background-color: white;
+    height: 2.5rem;
+    border-radius: .3125rem;
+    font-size: 1rem;
+    font-weight:400px;
+    color:black;
+}
+
+.logo {
+    width:3%;
+    float:right;
+    margin: -4% 5%;
+}
