@@ -1,0 +1,14 @@
+language: node_js
+node_js: node
+cache:
+  directories:
+  - node_modules
+env:
+- CI=true
+deploy:
+  provider: heroku
+  api_key:
+    secure: AIXCfqNUS7eivJlMqexQVRYse87eLCcaY2cvHX6Q+tz3QMqyuiL83AI7GqZ+7eBklMif6rvGB2nXLfXxGY0nT1h2C2MJ+oQYHC4tGiyZtL01o2aJJzce2dGmRVnf25KU2q9JrSfIzjCIZrW42aD6KVXoKa5+JAz8iW3Wb02uu9tiuIRes99vgqchQDDMqr8gH2EeD6oGHtjQC+XRUPcbqMDX/frSxCGN2xWGrfCax5zHpQ2vp+T3TWW356vxzGuF89p5RZ3G7Mid1RM8Xq6EQmeY3sZGYI6zYzh/MT6PI+Oi5VKCC4l7jf3rjIVeI4SnJJbIxBKtPndVEmbks+wnwKM4dKA8XGIwngetiSIjV6qoAF1enQKeyfspvBDxQCDLv7y0OY54MgJthx18fNIArYa2VPjzxLylk6rlfRs3G/QUEIC4+m5xryiv162P/HTUefvncwKC5pbDUsCWpGWIrHBqggAMAAYOC3krk2qb6sr0AI/AejYgBmcDVIq654+gDysU/1642L6Yn/i7Qkdl6KRDmudvctaXCcoi/5uICC3XgqaDTPrje7gnCwqlnJHAPaMQN5mH0ll65L7XwzV/dsUDm+5yeMOL+7DcPBdzbS46CE6vOJBcuyZ8zwW8q42Rwszl6YUOf0fqxxRA60rhD5Rry98hzmdp8CHl7XeHB1E=
+  app: murmuring-island-10579
+  on:
+    repo: j4rojas/UNC_Eats
