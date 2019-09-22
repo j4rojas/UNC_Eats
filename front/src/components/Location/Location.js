@@ -1,5 +1,6 @@
 import React from 'react';
 import Comments from '../Comments/Comments';
+import Address from '../Address/Address';
 import CafeImg from '../../Assets/Images/Friends_cafe.png';
 
 export default function Location() {
@@ -9,7 +10,7 @@ export default function Location() {
             <img src={CafeImg}/>
             <ul className="Location">
                 <li>
-                    <Comments/>
+                    <Address/>
                 </li>
                 <li>
                     <Comments/>
@@ -19,3 +20,4 @@ export default function Location() {
     );
 }
 
+//for location

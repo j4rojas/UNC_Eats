@@ -1,0 +1,44 @@
+h1{
+    background-color:rgb(3, 30, 58);
+    text-align: center;
+    margin: -8px -2px;
+    color:white;
+    border-bottom:20px solid #0b6efd;
+    padding:10px;
+    position:relative;
+}
+p {
+    text-align: center;
+    padding: 9px;
+    margin-top: 10px;
+}
+
+.regForm {
+    border-radius: 5px;
+    border: 1px grey solid;
+    height: 50%;
+    width: 50%;
+    margin: -5px 360px;
+    background-color:rgba(255, 255, 255, 0.842);
+    position: absolute; 
+}
+.containerr {
+    margin: 0px auto;
+}
+
+.Info {
+    width: 50%;
+    height:30px;
+    margin:10px;
+}
+
+button {
+    width:30%;
+    margin: 0 35%;
+    background-color: #0b6efd;
+    height: 2.5rem;
+    border-radius: .3125rem;
+    font-size: 1rem;
+    font-weight:400px;
+    position:relative;
+}

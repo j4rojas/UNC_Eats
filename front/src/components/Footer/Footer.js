@@ -4,7 +4,7 @@ import React from 'react';
 export default function Footer() {
     return(
         <footer className ="footer">
-            <h2>Testing</h2>
+            <p>created by Jasmine Rojas</p>
         </footer>
     )
 }
