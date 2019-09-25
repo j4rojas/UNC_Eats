@@ -12,14 +12,14 @@ export default function regForm() {
                     <label for="lastname"></label>
                     <input type="text" class="lastname Info"placeholder="Last Name" name="lastname" required/>    
 
-                    <label for="usrname"></label>
+                    <label for="email"></label>
+                    <input type="text" class="email Info"placeholder="Email" name="email" required/>
+
+                    <label for="username"></label>
                     <input type="text" class="regUsername Info"placeholder="Username" name="usrname" required/>
 
                     <label for="pwd"></label>
                     <input type="password" class="regPassword Info"placeholder="Password" name="pwd" required/>
-
-                    <label for="email"></label>
-                    <input type="text" class="email Info"placeholder="Email" name="email" required/>
 
                     <button type="submit" id="regbtn">Register</button>
                     {/* <p class="lgnin">Already have an account? <Link to="#loginPage">Sign in</Link>.</p> */}
@@ -27,3 +27,4 @@ export default function regForm() {
             </form>      
     );
 }
+

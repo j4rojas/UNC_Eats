@@ -16,9 +16,9 @@ p {
 .newForm {
     border-radius: 5px;
     border: 1px grey solid;
-    height: 50%;
+    height: 60%;
     width: 50%;
-    margin: -5px 360px;
+    margin: auto 360px;
     background-color:rgba(255, 255, 255, 0.842);
     position: absolute;
 }
@@ -26,10 +26,10 @@ p {
     margin: 0 auto;
 }
 
-.name,.newImage, .address, .firstComment {
+.name, .newImage, .address, .firstComment {
     width: 70%;
     height:30px;
-    margin:10px;
+    margin:22px;
     position: relative;
 }
 

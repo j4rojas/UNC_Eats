@@ -17,7 +17,6 @@ import { Link } from 'react-router';
             <button type="submit" id="sigbtn">Sign in</button>
         </div>
         <div class="container">
-            {/* <!-- <p class="pwd"> <a href="#requestpwdPage">Forgot password?</a></p> --> */}
             <p class="reg"><Link to="regForm">Not Enrolled? Sign Up Now</Link></p>
         </div>
     </form>

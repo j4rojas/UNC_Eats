@@ -13,9 +13,7 @@ export default function Form() {
                 <input type="text" class="firstComment" placeholder="comments" required/>
                 <button type="submit" id="newbtn" name="submit">Submit</button>
             </div>
-         </form>
+         </form>   
     );
 }
 
-
-        
