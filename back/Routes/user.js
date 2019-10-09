@@ -1,9 +1,9 @@
 const express = require('express');
-const bcrypt = require('bcrypt');
+//const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 const User = require('../models').User;
-
+var cors = require('cors');
 
 router.get('/user',(req,res)=> {
     User
@@ -25,12 +25,13 @@ router.get('/user',(req,res)=> {
 
 //new User
 
-router.post('/new', (req, res) => {
-    console.log(req.body);
+router.post('/new', cors(), (req, res) => {
     const requiredFields = ['firstName', 'lastName','email', 'userName','password'];
     for (let i=0; i<requiredFields.length; i++) {
         const field= requiredFields[i];
         if (!(field in req.body)) {
+            console.log(field);
+            console.log(req.body);
             const message = `Missing ${field} in request body`
             console.error(message);
             return res.status(400).send(message);
@@ -98,7 +99,5 @@ router.post('/login',(req,res)=> {
     .catch(err => {
         res.status(500).json({message:'Internal server error'});
     })
-   
 })
-
 module.exports = router;

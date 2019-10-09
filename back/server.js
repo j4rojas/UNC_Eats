@@ -1,18 +1,20 @@
 'use strict';
 require('dotenv').config();
+const cors = require('cors');
 const express = require('express');
 const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 const {DATABASE_URL, PORT} = require('./config');
 
+const UserRoute = require('./Routes/user');
 const ResturantRoute = require('./Routes/resturant');
-
 const app = express();
 
+
 app.use(express.json());
-
 app.use('/resturant', ResturantRoute);
-
+app.use('/user', UserRoute);
+app.use(cors());
 let server;
 
 function runServer(databaseUrl, port = PORT) {

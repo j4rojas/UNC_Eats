@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
     })
 });
     
-router.get('/all/:token',(req, res) => {
+router.get('/all',(req, res) => {
    console.log('all resturants'); //this is just testing if the get method works
    Resturant
    .find({user:req.user.id})
@@ -74,7 +74,7 @@ router.get('/resturant',(req,res)=> {
 });
 
 
-router.post('/new/:token', verifyToken, (req, res) => {  
+router.post('/new', (req, res) => {  
     console.log(req.body);
     const requiredFields = ['title', 'address','comment'];
     for (let i=0; i<requiredFields.length; i++) {
@@ -87,7 +87,7 @@ router.post('/new/:token', verifyToken, (req, res) => {
     }
     Resturant
         .create({
-            user: req.user.id,
+            // user: req.user.id,
             title: req.body.title,                                   
             address: req.body.address,
             comment: req.body.comment
@@ -107,3 +107,7 @@ router.delete('/one/:id/:token',verifyToken,(req,res)=> {
         });
 });
 module.exports = router;
+
+//get all resturants and put on screen
+//create user
+//delete resturant
