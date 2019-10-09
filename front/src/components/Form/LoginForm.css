@@ -1,46 +1,57 @@
 h1{
+    border-bottom:25px solid #99BADD;
+    padding:10px;
+}
+.title {
     background-color:rgb(3, 30, 58);
     text-align: center;
-    margin: -8px -2px;
+    margin: 0 -15px;
+    border-radius: 4px;
     color:white;
-    border-bottom:20px solid #0b6efd;
+    width:100%;
+    border-bottom:20px solid #99BADD;
     padding:10px;
-    position:relative;
+    position:absolute;
 }
 p {
     text-align: center;
-    padding: 9px;
-    margin-top: 10px;
+    padding: 19px;
 }
 
-.regForm {
+.loginForm {
     border-radius: 5px;
     border: 1px grey solid;
-    height: 50%;
-    width: 50%;
-    margin: -5px 360px;
+    height: 60%;
+    width: 40%;
+    margin: 6% 30%;
     background-color:rgba(255, 255, 255, 0.842);
     position: absolute;
 }
-.containerr {
-    margin: 0 auto;
-    position: absolute;
 
+.container {
+    width:100%;
 }
 
 .Info {
-    width: 50%;
-    height:30px;
-    margin:10px;
+    width: 75%;
+    height:50px;
+}
+.userLabel {
+    margin-top:105px;
+}
+.passwordLabel{
+    margin-top:0px;
 }
 
-button {
-    width:30%;
-    margin: 0 35%;
-    background-color: #0b6efd;
+#sigbtn {
+    margin: 5% 37%;
+    background-color: #99BADD;
     height: 2.5rem;
     border-radius: .3125rem;
     font-size: 1rem;
     font-weight:400px;
     position:relative;
+}
+.reg {
+    margin: -10px 5px;
 }

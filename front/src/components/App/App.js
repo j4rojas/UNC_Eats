@@ -1,38 +1,29 @@
 import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from '../Home/Home';
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
 import Location from '../Location/Location';
-import NewForm from '../Form/NewForm';
-import RegForm from '../Form/regForm';
+import LoginForm from '../Form/LoginForm';
+import regForm from '../Form/regForm';
+import resturantForm from '../Form/resturantForm';
+import start from '../Start/start'
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 
-
-function App() {
+export default function App(props) {
   return (
-    <div className="App">
-      <Header/>
-      
-      <p class="landingPage">UNC Eats is for food enthusiasts. Find new cafes and resturants near campus.</p>
-      <ul className="locations">
-        <li className="location-wrapper one">
-          <Location/>
-        </li>
-        <li className="location-wrapper">
-          <Location/>
-        </li>
-        <li className="location-wrapper">
-          <Location/>
-        </li>
-      </ul>
-      <Footer/>
-      <RegForm/>
-      <NewForm/> 
-    </div>
-   
+      <Router>
+          <div className="app">
+              <Header></Header>
+              <main>
+                  <Route exact path="/" component={Home} />
+                  <Route exact path="/Location" component={Location} />
+                  <Route exact path="/LoginForm" component={LoginForm}/>
+                  <Route exact path="/regForm" component={regForm} />
+                  <Route exact path="/resturantForm" component={resturantForm}/>
+                  <Route exact path="/start" component={start}/>
+              </main>
+          </div>
+      </Router>
   );
-}
-
-export default App;
-
-
-
+};

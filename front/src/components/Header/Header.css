@@ -1,36 +1,12 @@
-.Unc {
-    width:50%;
-    position:relative;   
-}
-
-.logo {
+.Logo {
     width:3.5%;
-    position:absolute;
-    margin: 3% -70%;
-    padding: 1% 0%;
+    position: absolute;
+    margin: -5.5% 10%;
 }
-
-.title {
-    color:white;
-    text-align: left;
-    font-size: 25px;
-    font-weight: bold;
-    position:absolute;
-    margin: -8.5% 9%;
+.header {
+    background-color: rgb(3, 30, 58);
+    text-align: center;
+    border-bottom:30px solid #99BADD;
+    position:relative;
+    width:100%;
 }
-
-.loginBtn {
-    float:right;
-    width:5%;
-    margin: 3% 15%;
-    height: 2.5rem;
-    border-radius: .3125rem;
-    font-size: 25px;
-    font-weight:450px;
-    color:white;
-    border-color:#99BADD;
-    border-bottom-color: white;
-    background-color:#99BADD;
-    position:absolute;
-}
-

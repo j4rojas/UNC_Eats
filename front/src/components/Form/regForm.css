@@ -1,44 +1,47 @@
 h1{
-    background-color:rgb(3, 30, 58);
-    text-align: center;
-    margin: -8px -2px;
-    color:white;
-    border-bottom:20px solid #0b6efd;
-    padding:10px;
-    position:relative;
+    border-bottom:25px solid #99BADD;
+    padding: 10px;
+}
+
+.regTitle{
+    background-color: rgb(3,30,58);
+    text-align:center;
+    font-size:25px;
+    margin: 0 -15px;
+    border-radius: 4px;
+    width:100%;
+    border-bottom: 20px solid #99BADD;
+    position:absolute;
 }
 p {
     text-align: center;
-    padding: 9px;
+    padding: 19px;
     margin-top: 10px;
 }
 
 .regForm {
     border-radius: 5px;
     border: 1px grey solid;
-    height: 50%;
-    width: 50%;
-    margin: -5px 360px;
-    background-color:rgba(255, 255, 255, 0.842);
+    height: 60%;
+    width: 40%;
+    margin:6% 30%;
     position: absolute; 
 }
-.containerr {
-    margin: 0px auto;
+.container {
+    width:100%;
 }
 
 .Info {
-    width: 50%;
+    width: 80%;
     height:30px;
-    margin:10px;
+    margin:10.5px;
 }
 
-button {
-    width:30%;
-    margin: 0 35%;
-    background-color: #0b6efd;
-    height: 2.5rem;
-    border-radius: .3125rem;
-    font-size: 1rem;
-    font-weight:400px;
-    position:relative;
+.btn-primary {
+    position:absolute;
+    background-color: #99Badd;
+    border-color:#99BADD;
+    margin: 25% -42%;
+    width:20%;
 }
+

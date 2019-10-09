@@ -1,0 +1,39 @@
+.UNC {
+    width:100%;
+    position:absolute; 
+    height:40%;
+}
+
+.btn-primary {
+    position:absolute;
+    background-color: #99Badd;
+    border-color:#99BADD;
+    margin: -5.7% 80%;
+    width:7%;
+}
+
+.locations {
+    display: flex;
+    align-items: felx-start;
+}
+  
+.location-wrapper {
+    background: white;
+    border: 1px solid black;
+    margin: 300px 25px;
+    padding: 20px;
+    min-width: 300px;
+    border-radius: 4px;
+    position:relative;
+}
+  
+.location-wrapper:first-child {
+    margin-left: auto;
+}
+  
+.location-wrapper:last-child {
+    margin-right: auto;
+}
+.home-page {
+ background-color:#99BADD;
+}
