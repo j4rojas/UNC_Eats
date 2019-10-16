@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Resturant = require('../models').Resturant;
 const jwt = require('jsonwebtoken');
+var cors = require('cors');
 
 function verifyToken (req,res,next) {
     const token = req.params.token;
@@ -26,10 +27,11 @@ router.get('/', (req, res) => {
     })
 });
     
-router.get('/all',(req, res) => {
+router.get('/all',cors(),(req, res) => {
    console.log('all resturants'); //this is just testing if the get method works
    Resturant
-   .find({user:req.user.id})
+   .find()
+//    .find({user:req.user.id})
    .then(resturants => res.json(resturants))
    .catch(err => {
        console.error(err);

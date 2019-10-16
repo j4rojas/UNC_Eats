@@ -1,9 +1,10 @@
 const express = require('express');
-//const bcrypt = require('bcrypt');
+const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
 const User = require('../models').User;
 var cors = require('cors');
+const corsOptions = {optionsSuccessStatus: 200}
 
 router.get('/user',(req,res)=> {
     User
@@ -25,19 +26,19 @@ router.get('/user',(req,res)=> {
 
 //new User
 
-router.post('/new', cors(), (req, res) => {
+router.post('/new', cors(corsOptions), (req, res) => {
     const requiredFields = ['firstName', 'lastName','email', 'userName','password'];
-    for (let i=0; i<requiredFields.length; i++) {
-        const field= requiredFields[i];
-        if (!(field in req.body)) {
-            console.log(field);
-            console.log(req.body);
-            const message = `Missing ${field} in request body`
-            console.error(message);
-            return res.status(400).send(message);
-        }
-    }
-
+    // for (let i=0; i<requiredFields.length; i++) {
+    //     const field= requiredFields[i];
+    //     if (!(field in req.body)) {
+    //         console.log(field);
+    //         console.log(req.body);
+    //         const message = `Missing ${field} in request body`
+    //         console.error(message);
+    //         // return res.status(400).send(message);
+    //     }
+    // }
+    console.log(req.body);
     User
         .findOne({email:req.body.email}) 
         .then(userFind => {
@@ -47,7 +48,8 @@ router.post('/new', cors(), (req, res) => {
             else {
                 bcrypt.hash(req.body.password,10, function(err, hash) {
                 if (err) {
-                    res.status(500).json({message: 'Internal server error'});
+
+                    res.status(500).json({message: 'Internal server error', data:err});
                     return
                 }
                 User
@@ -72,7 +74,7 @@ router.post('/new', cors(), (req, res) => {
    
 });
 
-router.post('/login',(req,res)=> {
+router.post('/login',cors(),(req,res)=> {
     console.log(req.body.userName);
     User.findOne({userName:req.body.userName}) 
     .then(userFind => {
