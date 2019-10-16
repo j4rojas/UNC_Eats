@@ -23,26 +23,26 @@ p {
     border: 1px grey solid;
     height: 60%;
     width: 40%;
-    margin: 6% 30%;
+    margin: 6% auto;
     background-color:rgba(255, 255, 255, 0.842);
-    position: absolute;
+    position: relative;
 }
 
-.container {
-    width:100%;
-}
 
-.Info {
+.username-login.Info, .password.Info {
     width: 75%;
-    height:50px;
-}
-.userLabel {
-    margin-top:105px;
-}
-.passwordLabel{
-    margin-top:0px;
+    height:35px;
+    margin: 5% 15%;
+    position:relative;
 }
 
+.userLabel {
+    margin-top:120px;
+}
+
+.userLabel, .passwordLabel {
+    margin-left:15%;
+}
 #sigbtn {
     margin: 5% 37%;
     background-color: #99BADD;

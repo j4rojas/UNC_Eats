@@ -4,11 +4,11 @@
     height:40%;
 }
 
-.btn-primary {
+.loginBtn.btn.btn-primary {
     position:absolute;
     background-color: #99Badd;
     border-color:#99BADD;
-    margin: -5.7% 80%;
+    margin: -5% 80%;
     width:7%;
 }
 

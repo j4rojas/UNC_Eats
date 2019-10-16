@@ -1,36 +1,54 @@
 h1{
-    background-color:rgb(3, 30, 58);
-    text-align: center;
     margin: -8px -2px;
     color:white;
-    border-bottom:20px solid #0b6efd;
     padding:10px;
     position:relative;
 }
+
+.cafeTitle{
+    background-color:rgb(3, 30, 58);
+    text-align: center;
+    margin: 0 -15px;
+    border-radius: 4px;
+    color:white;
+    width:100%;
+    border-bottom:20px solid #99BADD;
+    font-size:30px;
+    position:absolute;
+}
 p {
     text-align: center;
-    padding: 9px;
-    margin-top: 10px;
+    padding: 19px;
 }
 
 .newForm {
     border-radius: 5px;
     border: 1px grey solid;
-    height: 60%;
-    width: 50%;
-    margin: auto 360px;
+    width: 45%;
+    margin:10% auto;
     background-color:rgba(255, 255, 255, 0.842);
-    position: absolute;
-}
-.container {
-    margin: 0 auto;
+    position:relative;
 }
 
-.cafeName, .newImage, .address, .firstComment {
-    width: 70%;
-    height:30px;
-    margin:22px;
+.placeName{
+    margin-top:20%;
+    margin-left: 10%;
+    width: 80%;
+    height:35px;
+    position:relative;
+}
+.newImage{
+    margin: 0 30%;
+}
+.address, .comment {
+    width: 80%;
+    height:35px;
+    margin:2% 10%;
     position: relative;
+}
+
+.container {
+    height:100%;
 }
 
 button {

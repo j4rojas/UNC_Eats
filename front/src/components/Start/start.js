@@ -7,7 +7,7 @@ export default function start() {
         <div className="start">
               <Home/>
               <Button className="addNew" href="/regForm">Add New</Button>
-        </div>
-        
+        </div>       
     );
 }
+

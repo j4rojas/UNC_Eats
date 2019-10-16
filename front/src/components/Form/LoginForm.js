@@ -10,16 +10,14 @@ export default class LoginForm extends React.Component {
             password: ""
         }
     }
-    handleUserName(event) {
+
+    handleChange(event) {
+        console.log(event.currentTarget.value);
         this.setState({
-            userName: event.currentTarget.value
+            [event.currentTarget.name]: event.currentTarget.value
         })
     }
-    handlePassword(event) {
-        this.setState({
-            password: event.currentTarget.value
-        })
-    }
+    
     loginSubmit(event) {
         event.preventDefault();
         fetch('http://localhost:8080/user/login', {
@@ -42,12 +40,12 @@ export default class LoginForm extends React.Component {
                 <div className="container">
                     <h1 class="title">Login</h1>
                     <label class ="userLabel"for="usrname">Username</label>
-                    <input type="text" placeholder="Please enter your username" class="username-login Info" name="usrname" required
-                        onChange={(event)=> this.handleUserName(event)}
+                    <input type="text" class="use Info" placeholder="Please enter your username" class="username-login Info" name="userName" required
+                        onChange={(event)=> this.handleChange(event)}
                     />
                     <label class="passwordLabel"for="pwd">Password</label>
-                    <input type="password" placeholder="Please enter your password" class="password Info" name="pwd" required
-                        onChange={(event)=> this.handlePassword(event)}
+                    <input type="password" class="pass Info" placeholder="Please enter your password" class="password Info" name="password" required
+                        onChange={(event)=> this.handleChange(event)}
                     />
                     <button type="submit" id="sigbtn">Sign in</button>
                     <p class="reg"><Link to="/regForm">Not Enrolled? Sign Up Now</Link></p>
