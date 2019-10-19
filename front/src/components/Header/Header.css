@@ -7,7 +7,7 @@
     background-color: rgb(3, 30, 58);
     text-align: center;
     border-bottom: 15px solid #99BADD;
-    position: absolute;
+    position: relative;
     width:100%;
     margin:0 auto;
 }
@@ -20,10 +20,9 @@
 
     .Logo { 
         width:12%;
-        margin: 2% 6%;
+        margin: -20% 7%;
     }
     .header{
-        width:100%;
         font-size:28px;
     } 
 }
@@ -35,10 +34,10 @@
   and (min-width: 375px) { 
     .Logo { 
         width:11%;
-        margin: 2% 8%;
+        margin: -18% 6%;
     }
     .header{
-        font-size:34px;
+        font-size:33px;
     } 
 }
 
@@ -47,10 +46,10 @@
 
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 414px) { 
+  and (min-width: 414px) { 
     .Logo { 
-        width:11%;
-        margin: 1% 10%;
+        width:10%;
+        margin: -17% 6%;
     }
     .header{
         font-size:35px;
@@ -60,22 +59,22 @@
 
 /* Portrait and Landscape */
 @media only screen 
-  and (min-device-width: 768px) {
+  and (min-width: 768px) {
     .Logo { 
-        width:6%;
-        margin: 1% 10%;
+        width:7%;
+        margin: -10.5% 6%;
     }
     .header{
         font-size:40px;
     } 
 }
 
-/* Portrait and Landscape */
+/* iPad Pro */
 @media only screen 
-  and (min-device-width: 1024px) {
+  and (min-width: 1024px) {
     .Logo { 
-        width:5%;
-        margin: .5% 12%;
+        width:6%;
+        margin: -8.5% 8%;
     }
     .header{
         font-size:45px;
@@ -86,8 +85,8 @@
 @media screen 
   and (min-width: 1200px) {
     .Logo { 
-        width:3%;
-        margin: -5% 10%;
+        width: 4%;
+        margin: -6% 8%;
     }
     .header{
         font-size:40px;
@@ -97,8 +96,8 @@
 @media screen 
   and (min-width: 1440px) {
     .Logo { 
-        width:3.5%;
-        margin: .5% 6%;
+        width:4%;
+        margin: -6% 8%;
     }
     .header {
         font-size:45px;
