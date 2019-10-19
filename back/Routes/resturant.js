@@ -3,6 +3,7 @@ const router = express.Router();
 const Resturant = require('../models').Resturant;
 const jwt = require('jsonwebtoken');
 var cors = require('cors');
+router.options('/', cors());
 
 function verifyToken (req,res,next) {
     const token = req.params.token;
@@ -76,7 +77,7 @@ router.get('/resturant',(req,res)=> {
 });
 
 
-router.post('/new', (req, res) => {  
+router.post('/new',cors(), (req, res) => {  
     console.log(req.body);
     const requiredFields = ['title', 'address','comment'];
     for (let i=0; i<requiredFields.length; i++) {
