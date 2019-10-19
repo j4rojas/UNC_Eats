@@ -42,7 +42,7 @@ export default class Home extends React.Component {
                             )
                         }) 
                     }
-            </ul>
+                </ul>
             </div>
         );
     }
