@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const User = require('../models').User;
 var cors = require('cors');
 const corsOptions = {optionsSuccessStatus: 200}
@@ -26,18 +27,18 @@ router.get('/user',(req,res)=> {
 
 //new User
 
-router.post('/new', cors(corsOptions), (req, res) => {
+router.post(proxyurl+'/new', cors(corsOptions), (req, res) => {
     const requiredFields = ['firstName', 'lastName','email', 'userName','password'];
-    // for (let i=0; i<requiredFields.length; i++) {
-    //     const field= requiredFields[i];
-    //     if (!(field in req.body)) {
-    //         console.log(field);
-    //         console.log(req.body);
-    //         const message = `Missing ${field} in request body`
-    //         console.error(message);
-    //         // return res.status(400).send(message);
-    //     }
-    // }
+    for (let i=0; i<requiredFields.length; i++) {
+        const field= requiredFields[i];
+        if (!(field in req.body)) {
+            console.log(field);
+            console.log(req.body);
+            const message = `Missing ${field} in request body`
+            console.error(message);
+            // return res.status(400).send(message);
+        }
+    }
     console.log(req.body);
     User
         .findOne({email:req.body.email}) 
