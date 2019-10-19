@@ -46,7 +46,7 @@ export default class registrationForm extends React.Component {
                 // $('regpage').hide();
                 // $('loginPage').show();
             })
-            .catch((err)=>{console.log(err)});
+            .catch((err) => {console.log(err)});
     }
     render () {
         return (
