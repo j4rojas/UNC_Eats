@@ -1,7 +1,6 @@
 .UNC {
     width:100%;
     height:35%;
-    margin: 8% 0;
 }
 
 .loginBtn.btn.btn-primary {
@@ -38,7 +37,8 @@
 .home-page {
  background-color:#99BADD;
  width:100%;
- height:100%
+ height:100%;
+ position:absolute;
 }
 
 
@@ -49,12 +49,14 @@
 @media only screen  
   and (min-width: 320px) {
 
-    .UNC { 
-        margin: 25% 0;
-    }
     .loginBtn.btn.btn-primary {
-        margin: 2.5% -28%;
+        margin: -18% -28%;
         width:24%;
+        height: 6%;
+    }
+
+    .UNC {
+        height:20%;
     }
 }
 
@@ -63,12 +65,13 @@
 /* Portrait and Landscape */
 @media only screen  
   and (min-width: 375px) { 
-    .UNC { 
-        margin: 23% 0;
-    }
     .loginBtn.btn.btn-primary {
-        margin: 3% -27%;
-        width:22%;
+        margin: -16% -26%;
+        width: 21%;
+        height: 5%;
+    }
+    .UNC {
+        height:16%;
     }
 }
 
@@ -77,11 +80,13 @@
 /* Portrait and Landscape */
 @media only screen 
   and (min-width: 414px) { 
-    .UNC { 
-        margin: 21% 0;
-    }
     .loginBtn.btn.btn-primary {
-        width:20%;
+        margin: -16% -25%;
+        width: 19%;
+        height: 5%;
+    }
+    .UNC {
+        height:18%;
     }
 }
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
@@ -89,54 +94,53 @@
 /* Portrait and Landscape */
 @media only screen 
   and (min-width: 768px) {
-    .UNC { 
-        margin: 10% 0;
-    }
     .loginBtn.btn.btn-primary {
-        margin: 2% -25%;
-        width:15%;
+        margin: -9% -18%;
+        width: 12%;
+        height: 4%;
+    }
+    .UNC {
+        height:21%;
     }
 }
 
 /* iPad Pro */
 @media only screen 
   and (min-width: 1024px) {
-    .UNC { 
-        margin: 9% 0;
-    }
     .loginBtn.btn.btn-primary {
-        margin: 1.5% -26%;
-        width:13%;
+        margin: -7% -18%;
+        width: 10%;
+        height: 3%;
     }
-
+    .UNC {
+        height:19%;
+    }
 }
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
   and (min-device-width: 1200px) {
-    .UNC { 
-        margin: 25% 0;
-    }
     .loginBtn.btn.btn-primary {
-        margin: 2.5% -28%;
-        width:24%;
+        margin: -5.5% -18%;
+        width: 10%;
+        height: 4.5%;
+        font-size:23px;
+    }
+    .UNC {
+        height:25%;
     }
 }
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
   and (min-width: 1440px) {
-    .UNC { 
-        margin: 5% 0;
-    }
     .loginBtn.btn.btn-primary {
-        margin: 1.5% -18%;
-        width:10%;
+        margin: -5.3% -19%;
+        width: 9%;
+        height:5.5%;
+        font-size:25px;
+    }
+    .UNC {
+        height:35%;
     }
 }
-
-
-
-
-
-
