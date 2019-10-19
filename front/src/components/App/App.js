@@ -21,7 +21,7 @@ export default function App(props) {
                   <Route exact path="/LoginForm" component={LoginForm}/>
                   <Route exact path="/regForm" component={regForm} />
                   <Route exact path="/resturantForm" component={resturantForm}/>
-                  <Route exact path="/start" component={start}/>
+                  <Route exact path="/start:startId" component={start}/>
               </main>
           </div>
       </Router>

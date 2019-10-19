@@ -23,9 +23,10 @@ p {
     border: 1px grey solid;
     height: 60%;
     width: 40%;
-    margin: 6% auto;
+    margin: 12% 30%;
+    font-size:15px;
     background-color:rgba(255, 255, 255, 0.842);
-    position: relative;
+    position: absolute;
 }
 
 

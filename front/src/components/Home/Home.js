@@ -8,10 +8,19 @@ export default class Home extends React.Component {
 
     constructor () {
         super()
+        this.state ={
+            resturants:[]
+        }
         fetch('http://localhost:8080/resturant/all') 
         // need to create token or might be part of the public view 
             .then((rep)=>{return rep.json()})
-            .then( (res) => {console.log(res)})
+            .then( (res) => {
+                
+                console.log(res)
+                this.setState({
+                    resturants:res
+                })
+            })
             .catch((err)=>{console.log(err)})
             console.log(this.state);
     }
@@ -22,15 +31,17 @@ export default class Home extends React.Component {
                 <img src={UNC} class="UNC"/>
                 <Button className="loginBtn" href="/LoginForm">Sign In</Button>
                 <ul className="locations">
-                    <li className="location-wrapper one">
-                        <Location/>
-                    </li>
-                    <li className="location-wrapper">
-                        <Location/>
-                    </li>
-                    <li className="location-wrapper">
-                        <Location/>
-                    </li>
+                    {
+                        this.state.resturants.map((resturant)=> {
+                            return (
+                                <li className="location-wrapper one">
+                                    <Location
+                                        title={resturant.title}
+                                    />
+                                </li>
+                            )
+                        }) 
+                    }
             </ul>
             </div>
         );

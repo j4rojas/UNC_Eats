@@ -21,6 +21,7 @@ export default class newResturantForm extends React.Component {
     }
 
     handleSubmit(event) {
+        debugger
         event.preventDefault();
         fetch('http://localhost:8080/resturant/new', {
             method: 'POST',
@@ -47,9 +48,10 @@ export default class newResturantForm extends React.Component {
                     
                     <input type="text" class="address" placeholder="Address" name="address" required onChange={(event)=> this.handleChange(event)}/>
                     <input type="text" class="comment" placeholder="comments" name="comment" required onChange={(event)=> this.handleChange(event)}/>                    
-                    <Button className="createBtn" href="/start">Create</Button>
+                    <Button className="createBtn" type="submit">Create</Button>
                 </div>
             </form>   
         );
     }
 }
+

@@ -2,11 +2,14 @@ import React from 'react';
 
 import './Address.css';
 
-export default function Address() {
-    const text = "1234 Main St CA, 12345";
+export default function Address(props) {
     return (
         <div className="Address">
-            {text}
+            {props.text}
         </div>
     );
+}
+
+Address.defaultProps = {
+    text: ''
 };
