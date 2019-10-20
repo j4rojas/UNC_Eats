@@ -21,7 +21,6 @@ export default class newResturantForm extends React.Component {
     }
 
     handleSubmit(event) {
-        debugger
         event.preventDefault();
         fetch('http://localhost:8080/resturant/new', {
             method: 'POST',
