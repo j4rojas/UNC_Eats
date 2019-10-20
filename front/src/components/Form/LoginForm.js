@@ -37,8 +37,8 @@ export default class LoginForm extends React.Component {
         return ( 
         <section id="loginPage">        
             <form className="loginForm" onSubmit={(event)=>this.loginSubmit(event)}> 
+            <h1 class="title">Login</h1>
                 <div className="container">
-                    <h1 class="title">Login</h1>
                     <label class ="userLabel"for="usrname">Username</label>
                     <input type="text" class="use Info" placeholder="Please enter your username" class="username-login Info" name="userName" required
                         onChange={(event)=> this.handleChange(event)}
