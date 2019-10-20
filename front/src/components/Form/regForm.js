@@ -50,9 +50,9 @@ export default class registrationForm extends React.Component {
     }
     render () {
         return (
-                <form class="regForm" onSubmit={(event) => this.handleSubmit(event)}>
+                <form class="regForm" onSubmit={(event) => this.handleSubmit(event)}>  
+                    <h1 class="regTitle">Register for an account</h1>
                     <div class="container">
-                        <h1 class="regTitle">Please Register for an account here</h1>
                         <label for="firstname"></label>
                         <input type="text" class="firstname Info" placeholder="First Name" name="firstName" required
                             onChange={(event) => this.handleChange(event)}
@@ -77,7 +77,6 @@ export default class registrationForm extends React.Component {
                         <input type="text" class="email Info"placeholder="Email" name="email"
                             onChange={(event)=> this.handleChange(event)}
                         />
-
                         <Button className="regBtn" type="submit">Register</Button>
                         <p class="login"><Link to="/LoginForm">Already have an account?</Link></p>
                     </div>
