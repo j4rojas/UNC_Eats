@@ -22,7 +22,7 @@ p {
     border-radius: 5px;
     border: 1px grey solid;
     width: 40%;
-    margin: 8% 30%;
+    margin: 10% auto;
     font-size:15px;
     background-color:rgba(255, 255, 255, 0.842);
     position: relative;
