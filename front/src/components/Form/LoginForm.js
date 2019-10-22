@@ -22,13 +22,16 @@ export default class LoginForm extends React.Component {
         event.preventDefault();
         fetch('http://localhost:8080/user/login', {
             method: 'POST',
-            header: {
+            headers: {
                 'Content-Type': 'application/json'
             },
             body:JSON.stringify(this.state)
         })
         .then((rep)=>{return rep.json()})
-        .then((res) => {console.log(res)})
+        .then((res) => {console.log(res) 
+            localStorage.setItem('token', res.token);
+        
+        })
         .catch((err)=>{console.log(err)})
         console.log(this.state);
     }
@@ -37,18 +40,18 @@ export default class LoginForm extends React.Component {
         return ( 
         <section id="loginPage">        
             <form className="loginForm" onSubmit={(event)=>this.loginSubmit(event)}> 
-            <h1 class="title">Login</h1>
+            <h1 className="title">Login</h1>
                 <div className="container">
-                    <label class ="userLabel"for="usrname">Username</label>
-                    <input type="text" class="use Info" placeholder="Please enter your username" class="username-login Info" name="userName" required
+                    <label className ="userLabel"for="usrname">Username</label>
+                    <input type="text" className="use Info" placeholder="Please enter your username" class="username-login Info" name="userName" required
                         onChange={(event)=> this.handleChange(event)}
                     />
-                    <label class="passwordLabel"for="pwd">Password</label>
+                    <label className="passwordLabel"for="pwd">Password</label>
                     <input type="password" class="pass Info" placeholder="Please enter your password" class="password Info" name="password" required
                         onChange={(event)=> this.handleChange(event)}
                     />
                     <button type="submit" id="sigbtn">Sign in</button>
-                    <p class="reg"><Link to="/regForm">Not Enrolled? Sign Up Now</Link></p>
+                    <p className="reg"><Link to="/regForm">Not Enrolled? Sign Up Now</Link></p>
                 </div>
             </form> 
         </section>
