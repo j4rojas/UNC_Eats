@@ -42,7 +42,6 @@ export  class Location extends React.Component {
                             onAdd={text => this.addComment(text)}
                         />
                     </li> */}
-                
                 </ul>
             </div>
         );
