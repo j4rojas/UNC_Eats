@@ -44,37 +44,39 @@ export default class registrationForm extends React.Component {
             })  
             .then( (resJSON) => {console.log(resJSON)
                 // $('regpage').hide();
-                // $('loginPage').show();
+               // $('loginPage').show();
             })
-            .catch((err) => {console.log(err)});
+            .catch( (error) => {console.error(error)
+            });
     }
+
     render () {
         return (
                 <form class="regForm" onSubmit={(event) => this.handleSubmit(event)}>  
                     <h1 class="regTitle">Register for an account</h1>
                     <div class="container">
                         <label for="firstname"></label>
-                        <input type="text" class="firstname Info" placeholder="First Name" name="firstName" required
+                        <input type="text" className="firstname Info" placeholder="First Name" name="firstName" required
                             onChange={(event) => this.handleChange(event)}
                         />
                         
                         <label for="lastname"></label>
-                        <input type="text" class="lastname Info"placeholder="Last Name" name="lastName" required
+                        <input type="text" className="lastname Info"placeholder="Last Name" name="lastName" required
                             onChange={(event) => this.handleChange(event)}
                         />    
 
                         <label for="username"></label>
-                        <input type="text" class="regUsername Info"placeholder="Username" name="userName" required
+                        <input type="text" className="regUsername Info"placeholder="Username" name="userName" required
                             onChange={(event)=> this.handleChange(event)}
                         />
 
                         <label for="pwd"></label>
-                        <input type="password" class="regPassword Info"placeholder="Password" name="password" required
+                        <input type="password" className="regPassword Info"placeholder="Password" name="password" required
                             onChange={(event)=> this.handleChange(event)}
                         />
 
                         <label for="email"></label>
-                        <input type="text" class="email Info"placeholder="Email" name="email"
+                        <input type="text" className="email Info"placeholder="Email" name="email"
                             onChange={(event)=> this.handleChange(event)}
                         />
                         <Button className="regBtn" type="submit">Register</Button>
