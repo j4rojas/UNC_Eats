@@ -3,7 +3,7 @@ const router = express.Router();
 const Resturant = require('../models').Resturant;
 const jwt = require('jsonwebtoken');
 var cors = require('cors');
-router.options('/', cors());
+// router.options('/', cors());
 
 function verifyToken (req,res,next) {
     const token = req.params.token;
@@ -21,6 +21,14 @@ function verifyToken (req,res,next) {
         next()
     })
 }
+
+router.options("/*", function (req,res, next) {
+    console.log("options")
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+    res.send(200);
+});
 
 router.get('/', (req, res) => {
     res.json({
@@ -76,8 +84,8 @@ router.get('/resturant',(req,res)=> {
         });
 });
 
-
-router.post('/new',cors(), (req, res) => {  
+router.post('/new/:token', cors(), (req, res) => {  
+    verifyToken(req, res);
     console.log(req.body);
     const requiredFields = ['title', 'address','comment'];
     for (let i=0; i<requiredFields.length; i++) {

@@ -2,7 +2,6 @@ const express = require('express');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const router = express.Router();
-const proxyurl = "https://cors-anywhere.herokuapp.com/";
 const User = require('../models').User;
 var cors = require('cors');
 const corsOptions = {optionsSuccessStatus: 200}
@@ -27,7 +26,15 @@ router.get('/user',(req,res)=> {
 
 //new User
 
-router.post(proxyurl+'/new', cors(corsOptions), (req, res) => {
+router.options("/*", function (req,res, next) {
+    console.log("options")
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+    res.send(200);
+});
+
+router.post('/new', cors(corsOptions), (req, res) => {
     const requiredFields = ['firstName', 'lastName','email', 'userName','password'];
     for (let i=0; i<requiredFields.length; i++) {
         const field= requiredFields[i];
