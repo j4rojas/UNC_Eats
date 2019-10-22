@@ -30,7 +30,7 @@ export default class Home extends React.Component {
             <div className="home-page">
                 <img src={UNC} class="UNC"/>
                 <Button className="loginBtn" href="/LoginForm">Sign In</Button>
-                <ul className="locations">
+                <ul className="Locations">
                     {
                         this.state.resturants.map((resturant)=> {
                             return (
