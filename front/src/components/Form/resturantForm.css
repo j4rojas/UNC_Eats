@@ -1,7 +1,6 @@
 h1{
     margin: -8px -2px;
     color:white;
-    padding:10px;
     position:relative;
 }
 
@@ -9,7 +8,7 @@ h1{
     background-color:rgb(3, 30, 58);
     text-align: center;
     margin: 0 -15px;
-    border-radius: 4px;
+    border-radius: 2px;
     color:white;
     width:100%;
     border-bottom:20px solid #99BADD;
@@ -28,31 +27,108 @@ p {
     height:60%;
     margin:12% 30%;
     background-color:rgba(255, 255, 255, 0.842);
-    position:absolute;
+    position:relative;
 }
 
 .placeName{
     margin-top:20%;
-    margin-left: 10%;
-    width: 80%;
-    height:35px;
-    position:relative;
 }
 .newImage{
-    margin: 0 30%;
-}
-.address, .comment {
-    width: 80%;
-    height:35px;
-    margin:2% 10%;
-    position: relative;
+    margin: 0 auto;
 }
 
 .container {
     height:100%;
+    width:85%;
 }
 
 .btn-primary {
     margin:5% 40%;
-    position:relative;
+    
+}
+
+.comment {
+    padding: 0 0;
+    margin: 10px 0px;
+    border-radius: 0;
+    text-align: left;
+}
+
+
+
+/* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
+
+/* Portrait and Landscape */
+@media screen  
+  and (min-width: 320px)
+  and (max-width:414px)  
+  {
+    .cafeTitle {
+        border-bottom: 19px solid #99BADD;
+        padding: 0;
+        font-size: 24px;
+    }
+    .newForm {
+        width: 85%;
+        margin: 10% 7%;
+    }
+    .placeName{
+        margin-top:45%;
+    }
+    .address {
+        margin:8% 0;
+    }
+    
+    .createBtn.btn.btn-primary {
+        background-color: #99BADD;
+        border-color: #99BADD;
+    }
+   
+}
+
+@media only screen 
+    and (min-width: 415px)
+    and (max-width:768px) {
+        .title {
+            font-size: 21px;
+        }
+        
+        #sigbtn {
+            width:30%;
+            margin: 5% 35%;
+        }
+        .container {
+            margin: 12% 0;
+        }
+        .loginForm{
+            width: 80%;
+            margin: 14% 11%
+        }
+        .userLabel {
+            margin-top:15%;
+        }
+}
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+@media only screen
+  and (min-width:769px)
+  and (max-width: 1024px)
+  {
+    .loginForm {
+        width: 60%;
+        margin: 14% 20%;
+    }
+    .userLabel, .passwordLabel,.username-login.Info, .password.Info {
+        margin-left:10%;
+    }
+ 
+    #sigbtn {
+        margin:21px 34.5%;
+        width:28%;
+    }
+
+    .container {
+        margin: 12% 0;
+    }
+
 }
