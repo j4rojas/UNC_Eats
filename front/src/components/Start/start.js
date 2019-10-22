@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux'
 import Location from '../Location/Location'
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 import ResturantForm from '../Form/resturantForm';
 import {addLocation} from '../../actions';
 
@@ -59,48 +59,3 @@ export default connect(mapStateToProps)(Start);
 
 
 
-// export default class Start extends React.Component {
-//     constructor(props) {
-//         super(props);
-
-//         this.state = {
-//             locations: [
-//                 {
-//                     title: 'Example Resturant 1'
-//                 },
-//                 {
-//                     title: 'Example Resturant 2'
-//                 },
-//                 {
-//                     title: 'Example Resturant 3'
-//                 }
-//             ]
-//         };
-//     }
-//     render() {
-//         const locations = this.state.locations.map((location, index) => (
-//             <li className="location-wrapper" key={index}>
-//                 <Location {...location} />
-//             </li>
-//         ));
-
-//         return (
-//             <div className="start">
-//                 <Button className="logOut" href="/">Log Out</Button>
-//                 <ul className="locations">
-//                     {locations}
-//                     <li className="add-location-wrapper">
-//                         <Button className="addNew" href="/resturantForm">Add New</Button>
-//                     </li>
-//                     <li
-//                             type="location"
-//                             onAdd={title => this.addLocation(title)}/>
-//                 </ul>
-//             </div>
-//         );
-//     }
-// }
-
-// Start.defaultProps = {
-//     title: 'Start'
-// };
