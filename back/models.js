@@ -18,6 +18,7 @@ const userSchema = mongoose.Schema({
 const resturantSchema = mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User'},
     title: {type:String, required:true},
+    //image
     address: {type: String, required: true },
     comment: {type: String, required: true}
 });
@@ -50,6 +51,7 @@ resturantSchema.methods.serialize = function() {
     return {
       id: this._id,
       title: this.title,
+      //image
       address: this.address,
       comment: this.comment,
     };
