@@ -1,0 +1,46 @@
+.newCafeBtn {
+    position: absolute;
+    width: 10%;
+    margin: -16% -81%;
+}
+
+/* ----------- iPad 3, 4 and Pro 9.7" ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-width: 768px) {
+    .newCafeBtn {
+        width: 7%;
+        margin: -9.5% -83%;
+    }    
+}
+
+/* iPad Pro */
+@media only screen 
+  and (min-width: 1024px) {
+    .newCafeBtn {
+        position: absolute;
+        width: 7%;
+        margin: -8.5% -80%;
+    }    
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) {
+    .newCafeBtn {
+        position: absolute;
+        width: 5%;
+        margin: -6.5% -81.5%;
+    }    
+}
+
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-width: 1440px) {
+    .newCafeBtn {
+        position: absolute;
+        width: 5%;
+        margin: -6% -84%;
+    }    
+}
