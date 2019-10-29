@@ -23,21 +23,14 @@ h3 {
 .location-wrapper {
     background: white;
     border: 1px solid black;
-    margin: 0 25px;
-    margin-bottom: 30%;
+    margin: 3% 3%;
     padding: 20px;
     min-width: 300px;
     border-radius: 4px;
     position:relative;
+    display:inline-block;
 }
-  
-.location-wrapper:first-child {
-    margin-left: auto;
-}
-  
-.location-wrapper:last-child {
-    margin-right: auto;
-}
+
 .home-page {
  background-color:#99BADD;
  width:100%;
@@ -51,7 +44,7 @@ h3 {
 
 /* Portrait and Landscape */
 @media only screen  
-  and (min-width: 320px) {
+  and (max-width: 320px) {
 
     .loginBtn.btn.btn-primary {
         margin: -18% -28%;
@@ -64,6 +57,9 @@ h3 {
     }
     .Locations {
         margin: 12% -1.5%;
+    }
+    .location-wrapper {
+        margin: 3% auto;
     }
 }
 
