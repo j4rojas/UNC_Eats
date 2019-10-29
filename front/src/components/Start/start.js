@@ -1,61 +1,57 @@
 import React from 'react';
-import {connect} from 'react-redux'
+import UNC from '../../Assets/Images/unc.jpeg';
 import Location from '../Location/Location'
+import './start.css'
+import Icon from '../../Assets/Images/addIcon.png';
+import { Link } from 'react-router-dom'; 
 import Button from 'react-bootstrap/Button';
-import ResturantForm from '../Form/resturantForm';
-import {addLocation} from '../../actions';
 
-export class Start extends React.Component {
-    addLocation(title) {
-        this.props.dispatch(addLocation(title, this.props.match.params.startId));
+export default class Start extends React.Component {
+
+    constructor (props) {
+        super(props)
+        this.state ={
+            resturants:[]
+        }
+
+        fetch('http://localhost:8080/resturant/all') 
+            .then((rep)=>{return rep.json()})
+            .then( (res) => {
+                
+                console.log(res)
+                this.setState({
+                    resturants:res
+                })
+            })
+            .catch((err)=>{console.log(err)})
+            console.log(this.state);
     }
 
     render () {
-        const locations = this.props.locations.map((location,index) => (
-            <li className="location-wrapper" key={index}>
-                <Location
-                    index={index}
-                    startId={this.props.match.params.startId}
-                    {...location}
-                />
-            </li>
-        ));
 
-        return (
-            <div className="start">
-                <h2>{this.props.match.params.startId}</h2>
-                <ul className="locations">
-                    {locations}
-                    <li className="add-location-wrapper">
-                        <ResturantForm
-                            type="location"
-                            onAdd={title=> this.addLocation(title)}
-                        />
-                    </li>
+        return(
+            <div className="home-page" ref={this.props.carRef}>
+                <img src={UNC} class="UNC"/>
+                <Link to="/resturantForm">
+                    <img src={Icon} className="newCafeBtn"/>
+                </Link>
+                <ul className="Locations">
+                {
+                    this.state.resturants.map((resturant)=> {
+                        return (
+                            <li className="location-wrapper">
+                                <Location
+                                    title={resturant.title}
+                                    address={resturant.address}
+                                    comment={resturant.comments}
+                                />
+                                  <Button className="deleteBtn"type="submit">delete</Button>
+                            </li>
+                            )
+                        }) 
+                    }
                 </ul>
             </div>
         );
     }
 }
-Start.defaultProps = {
-    title: 'Start'
-};
-
-const mapStateToProps = (state,props) => {
-    const start = Object.assign(
-        {},
-        {
-            locations: []
-        },
-        state.starts[props.match.params.startId]
-    );
-    return {
-        locations: start.locations
-    };
-};
-
-export default connect(mapStateToProps)(Start);
-
-
-
-
