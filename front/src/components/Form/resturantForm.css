@@ -25,7 +25,7 @@ p {
     border: 1px grey solid;
     width: 40%;
     height:60%;
-    margin:12% 30%;
+    margin:8% 30%;
     background-color:rgba(255, 255, 255, 0.842);
     position:relative;
 }
@@ -54,14 +54,11 @@ p {
     text-align: left;
 }
 
-
-
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
 
 /* Portrait and Landscape */
 @media screen  
-  and (min-width: 320px)
-  and (max-width:414px)  
+  and (min-width: 320px) 
   {
     .cafeTitle {
         border-bottom: 19px solid #99BADD;
@@ -82,53 +79,131 @@ p {
     .createBtn.btn.btn-primary {
         background-color: #99BADD;
         border-color: #99BADD;
+        margin:5% 41.5%;
+    }   
+}
+
+@media only screen  
+  and (min-width: 375px) { 
+    .cafeTitle {
+        font-size: 28px;
     }
-   
+    .newForm {
+        width: 85%;
+        margin: 20% 7.5%;
+    }
+    .placeName{
+        margin-top:47%;
+    }
+    .createBtn.btn.btn-primary {
+        background-color: #99BADD;
+        border-color: #99BADD;
+        margin:5% 44.5%;
+    }   
+
+}
+
+@media only screen  
+  and (min-width: 414px) { 
+    .cafeTitle {
+        font-size: 31px;
+    }
+    .newForm {
+        width: 85%;
+        margin: 20% 7.7%;
+    }
+    .placeName{
+        margin-top:50%;
+    }
+    .createBtn.btn.btn-primary {
+        background-color: #99BADD;
+        border-color: #99BADD;
+        margin:5% 42.5%;
+        width: 35%;
+    }   
+
 }
 
 @media only screen 
-    and (min-width: 415px)
-    and (max-width:768px) {
-        .title {
-            font-size: 21px;
+    and (min-width:768px) {
+        .cafeTitle {
+            font-size: 31px;
         }
-        
-        #sigbtn {
-            width:30%;
-            margin: 5% 35%;
+        .newForm {
+            width: 45%;
+            margin: 18% auto;
         }
+        .placeName{
+            margin-top:45%;
+        }
+        .createBtn.btn.btn-primary {
+            background-color: #99BADD;
+            border-color: #99BADD;
+            margin:5% 32.5%;
+            width: 35%;
+        }   
         .container {
-            margin: 12% 0;
+            width:100%;
+            font-size: 22px;
         }
-        .loginForm{
-            width: 80%;
-            margin: 14% 11%
-        }
-        .userLabel {
-            margin-top:15%;
-        }
+    
 }
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
 @media only screen
-  and (min-width:769px)
-  and (max-width: 1024px)
+  and (min-width: 1024px)
   {
-    .loginForm {
-        width: 60%;
-        margin: 14% 20%;
-    }
-    .userLabel, .passwordLabel,.username-login.Info, .password.Info {
-        margin-left:10%;
-    }
- 
-    #sigbtn {
-        margin:21px 34.5%;
-        width:28%;
-    }
+    .cafeTitle {
+        font-size: 37px;
+        border-bottom:25px solid #99BADD;
 
+    }
+    .newForm {
+        width: 45%;
+        margin: 18% auto;
+    }
+    .placeName{
+        margin-top:30%;
+    }
+    .createBtn.btn.btn-primary {
+        background-color: #99BADD;
+        border-color: #99BADD;
+        margin:5% 32.5%;
+        width: 35%;
+    }   
     .container {
-        margin: 12% 0;
+        width:100%;
+        font-size: 25px;
+    }
+}
+
+@media only screen
+  and (min-width: 1440px)
+  {
+    .cafeTitle {
+        font-size: 42px;
+        border-bottom:25px solid #99BADD;
+
+    }
+    .newForm {
+        width: 40%;
+        margin: 8% auto;
+    }
+    .placeName{
+        margin-top:25%;
     }
 
+    .placeName, .address, .newImage, .comment {
+        width:80%;
+    }
+    .createBtn.btn.btn-primary {
+        background-color: #99BADD;
+        border-color: #99BADD;
+        margin:5% 32.5%;
+        width: 35%;
+    }   
+    .container {
+        width:100%;
+        font-size: 25px;
+    }
 }
