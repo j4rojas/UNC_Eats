@@ -7,7 +7,7 @@ import Location from '../Location/Location';
 import LoginForm from '../Form/LoginForm';
 import regForm from '../Form/regForm';
 import resturantForm from '../Form/resturantForm';
-import start from '../Start/start'
+import Start from '../Start/start';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 
 export default function App(props) {
@@ -21,7 +21,7 @@ export default function App(props) {
                   <Route exact path="/LoginForm" component={LoginForm}/>
                   <Route exact path="/regForm" component={regForm} />
                   <Route exact path="/resturantForm" component={resturantForm}/>
-                  <Route exact path="/start:startId" component={start}/>
+                  <Route exact path="/Start" component={Start}/>
               </main>
           </div>
       </Router>
