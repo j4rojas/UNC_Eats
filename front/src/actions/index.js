@@ -5,11 +5,11 @@ export const addLocation = (title, startId) => ({
     startId,
 });
 
-// export const ADD_COMMENT = 'ADD_COMMENT';
-// export const addComment = (text, startId, locationIndex) => ({
-//     type: ADD_COMMENT,
-//     text,
-//     startId,
-//     locationIndex
-// });
+export const ADD_COMMENT = 'ADD_COMMENT';
+export const addComment = (text, startId, locationIndex) => ({
+    type: ADD_COMMENT,
+    text,
+    startId,
+    locationIndex
+});
 
