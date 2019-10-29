@@ -34,9 +34,11 @@ export default class Home extends React.Component {
                     {
                         this.state.resturants.map((resturant)=> {
                             return (
-                                <li className="location-wrapper one">
+                                <li className="location-wrapper">
                                     <Location
                                         title={resturant.title}
+                                        address={resturant.address}
+                                        comment={resturant.comment}
                                     />
                                 </li>
                             )
