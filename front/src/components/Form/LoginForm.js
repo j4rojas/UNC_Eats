@@ -1,6 +1,8 @@
 import React from 'react';
 import './LoginForm.css';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
+
+
 
 export default class LoginForm extends React.Component {
     constructor(props) {
@@ -30,15 +32,15 @@ export default class LoginForm extends React.Component {
         .then((rep)=>{return rep.json()})
         .then((res) => {console.log(res) 
             localStorage.setItem('token', res.token);
-        
+            this.props.history.push('/start');
+         
         })
         .catch((err)=>{console.log(err)})
         console.log(this.state);
     }
-
     render () {
         return ( 
-        <section id="loginPage">        
+        <section id="loginPage"> 
             <form className="loginForm" onSubmit={(event)=>this.loginSubmit(event)}> 
             <h1 className="title">Login</h1>
                 <div className="container">
@@ -50,7 +52,7 @@ export default class LoginForm extends React.Component {
                     <input type="password" class="pass Info" placeholder="Please enter your password" class="password Info" name="password" required
                         onChange={(event)=> this.handleChange(event)}
                     />
-                    <button type="submit" id="sigbtn">Sign in</button>
+                    <button type="submit" id="sigbtn"></button>
                     <p className="reg"><Link to="/regForm">Not Enrolled? Sign Up Now</Link></p>
                 </div>
             </form> 
@@ -58,4 +60,3 @@ export default class LoginForm extends React.Component {
         );
     }
 }
-
