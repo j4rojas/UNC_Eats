@@ -3,7 +3,7 @@ const router = express.Router();
 const Resturant = require('../models').Resturant;
 const jwt = require('jsonwebtoken');
 var cors = require('cors');
-// router.options('/', cors());
+
 
 function verifyToken (req,res,next) {
     const token = req.params.token;
@@ -99,7 +99,8 @@ router.post('/new/:token', cors(), (req, res) => {
     Resturant
         .create({
             // user: req.user.id,
-            title: req.body.title,                                   
+            title: req.body.title, 
+            CafeImage: req.body.CafeImage,                                  
             address: req.body.address,
             comment: req.body.comment
         })
@@ -110,7 +111,7 @@ router.post('/new/:token', cors(), (req, res) => {
         });
 });
 
-router.delete('/one/:id/:token',verifyToken,(req,res)=> {
+router.delete('/one/:id/:token',cors(),(req,res)=> {
     resturant
         .findByIdAndRemove(req.params.id)
         .then(() => {
@@ -122,3 +123,4 @@ module.exports = router;
 //get all resturants and put on screen
 //create user
 //delete resturant
+
