@@ -7,11 +7,24 @@ export default class newResturantForm extends React.Component {
         super(props);
         this.state = {
             title: "",
-            newImage: "",
+            CafeImage: "",
             address: "",
             comment: ""
         }
     }
+
+    handleFileSelect(event) {
+        const that = this;
+        var f = event.target.files[0]; 
+        var reader = new FileReader();
+        reader.readAsDataURL(f);
+        reader.onload = function() {
+        that.setState({
+            CafeImage: reader.result
+        })
+    }
+  
+  }
 
     handleChange(event) {
         console.log(event.currentTarget.value);
@@ -31,7 +44,8 @@ export default class newResturantForm extends React.Component {
         }) 
         // need to create token or might be part of the public view 
             .then((rep)=>{return rep.json()})
-            .then( (res) => {console.log(res)
+            .then((res) => {console.log(res)
+                this.props.history.push('/start');
             })
             .catch((err)=>{console.log(err)})
             console.log(this.state);
@@ -44,10 +58,9 @@ export default class newResturantForm extends React.Component {
                     <input type="text" className="placeName" placeholder="Name of Place" name="title" required onChange={(event)=> this.handleChange(event)}/>
                     
                     <p><label for="picture" className="picture">Upload a picture:</label></p>
-                    <input type="file" className="newImage" accept="image/png, image/jpeg" name="newImage" onChange={(event)=> this.handleChange(event)}/>           
-                    
+                    <input type="file" className="NewImage" accept="image/png, image/jpeg" name="CafeImage" onChange={(event)=> this.handleFileSelect(event)}/>           
                     <input type="text" className="address" placeholder="Address" name="address" required onChange={(event)=> this.handleChange(event)}/>
-                    <input type="text" className="comment" placeholder="comments" name="comment" required onChange={(event)=> this.handleChange(event)}/>                    
+                    <input type="text" className="comment" placeholder="comment" name="comment" required onChange={(event)=> this.handleChange(event)}/>                    
                     <Button className="createBtn" type="submit">Create</Button>
                 </div>
             </form>   
