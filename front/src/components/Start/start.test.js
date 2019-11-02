@@ -46,7 +46,7 @@ describe('<Start/>', () => {
         const wrapper = shallow(
             <Start locations={seedLocations} dispatch={dispatch} />
         );
-        const locations = wrapper.find(List);
+        const locations = wrapper.find(Location);
         expect(locations.length).toEqual(seedLocations.length);
         const firstLocation = locations.first();
         expect(firstLocation.prop('title')).toEqual(seedLocations[0].title);
