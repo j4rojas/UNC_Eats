@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import CafeImg from '../../Assets/Images/Friends_cafe.png';
 
 export  class Location extends React.Component {
     constructor() {
         super();
 
         this.state = {
+            CafeImage:[],
             addresses: [],
             comments: []
         }
@@ -16,9 +16,9 @@ export  class Location extends React.Component {
             <div>
                 <h3>{this.props.title}</h3>
                 <ul className="locations">
-                    <img src={CafeImg}/>
+                    <li className="CafeImage"><img src={this.props.CafeImage} width="170px"/></li>
                     <li>{this.props.address}</li>
-                    <li>{this.props.comments}</li>
+                    <li>{this.props.comment}</li>
                 </ul>
             </div>
         );
