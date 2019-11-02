@@ -1,10 +1,19 @@
+.home-page {
+    background-color:#99BADD;
+    width:100%;
+    height:100%;
+    position:absolute;
+    overflow: scroll;
+   
+   }
+   
 .UNC {
     width:100%;
     height:35%;
 }
 
 .loginBtn.btn.btn-primary {
-    position:absolute;
+    position:fixed;
     background-color: #99Badd;
     border-color:#99BADD;
     margin: -5% 80%;
@@ -15,30 +24,23 @@ h3 {
     text-align:center;
 }
 
-.Locations {
-    position:absolute;
-    margin: 4%;
-}
   
 .location-wrapper {
     background: white;
     border: 1px solid black;
     margin: 3% 3%;
     padding: 20px;
-    min-width: 300px;
+    min-width: 330px;
+    width:5%;
     border-radius: 4px;
     position:relative;
     display:inline-block;
 }
 
-.home-page {
- background-color:#99BADD;
- width:100%;
- height:100%;
- position:absolute;
- overflow:scroll;
+.CafeImage {
+    margin:5% auto;
+    padding-top: 4%;
 }
-
 
 
 /* ----------- iPhone 5, 5S, 5C and 5SE ----------- */
@@ -55,9 +57,6 @@ h3 {
 
     .UNC {
         height:20%;
-    }
-    .Locations {
-        margin: 12% -1.5%;
     }
     .location-wrapper {
         margin: 3% auto;
@@ -77,9 +76,6 @@ h3 {
     .UNC {
         height:16%;
     }
-    .Locations {
-        margin: 12% 6%;
-    }
 }
 
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
@@ -95,9 +91,6 @@ h3 {
     .UNC {
         height:18%;
     }
-    .Locations {
-        margin: 15% 10%;
-    }
 }
 /* ----------- iPad 3, 4 and Pro 9.7" ----------- */
 
@@ -112,9 +105,6 @@ h3 {
     .UNC {
         height:21%;
     }
-    .Locations {
-        margin: 10% 10%;
-    }
 }
 
 /* iPad Pro */
@@ -127,9 +117,6 @@ h3 {
     }
     .UNC {
         height:19%;
-    }
-    .Locations {
-        margin:10%;
     }
 }
 
@@ -145,9 +132,6 @@ h3 {
     .UNC {
         height:25%;
     }
-    .Locations {
-        margin: 10%;
-    }
 }
 
 /* ----------- Non-Retina Screens ----------- */
@@ -161,8 +145,5 @@ h3 {
     }
     .UNC {
         height:35%;
-    }
-    .Locations {
-        margin: 5% 10%;
     }
 }
