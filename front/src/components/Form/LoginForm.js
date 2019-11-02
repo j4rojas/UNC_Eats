@@ -52,7 +52,7 @@ export default class LoginForm extends React.Component {
                     <input type="password" class="pass Info" placeholder="Please enter your password" class="password Info" name="password" required
                         onChange={(event)=> this.handleChange(event)}
                     />
-                    <button type="submit" id="sigbtn"></button>
+                    <button type="submit" id="sigbtn">Login</button>
                     <p className="reg"><Link to="/regForm">Not Enrolled? Sign Up Now</Link></p>
                 </div>
             </form> 
