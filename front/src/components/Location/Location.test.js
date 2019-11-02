@@ -1,7 +1,7 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {Location} from './Location';
-// import Comment from '../Comment/Comment';
+import Comment from '../Comment/Comment';
 import {addComment} from '../../actions';
 
 describe('<Location/>', () => {
@@ -38,7 +38,7 @@ describe('<Location/>', () => {
 
     it('Renders the comments', () => {
         const wrapper = shallow(<Location comments={seedComments} />);
-        const comments = wrapper.find(Card);
+        const comments = wrapper.find(Comment);
         expect(comments.length).toEqual(seedComments.length);
         const firstComment = comments.first();
         expect(firstComment.prop('text')).toEqual(seedComments[0].text);
