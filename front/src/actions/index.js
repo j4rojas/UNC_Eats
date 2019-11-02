@@ -13,3 +13,4 @@ export const addComment = (text, startId, locationIndex) => ({
     locationIndex
 });
 
+
