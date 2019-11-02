@@ -37,6 +37,7 @@ export default class Home extends React.Component {
                                 <li className="location-wrapper">
                                     <Location
                                         title={resturant.title}
+                                        CafeImage={resturant.CafeImage}
                                         address={resturant.address}
                                         comment={resturant.comment}
                                     />
