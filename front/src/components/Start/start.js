@@ -28,7 +28,7 @@ export default class Start extends React.Component {
     }
     handleDelete(event) {
         event.preventDefault();
-        fetch('http://localhost:8080/resturant/one/' + event.currentTarget.value +'/', {
+        fetch('http://localhost:8080/resturant/one/' + event.currentTarget.value +'/' +  localStorage.getItem('token'), {
             method: 'Delete',
             headers: {
                 'Content-Type':'application/json'
@@ -37,11 +37,16 @@ export default class Start extends React.Component {
         })
         .then((rep)=>{return rep.json()})
         .then((res)=>{console.log(res)
-            localStorage.setItem('token', res.token);
             this.props.history.push('/start');
         })
         .catch((err)=>{console.log(err)})
         console.log(this.state);
+    }
+
+    handleLogOut(event) {
+        event.preventDefault();
+        localStorage.removeItem('token');
+        this.props.history.push('/');
     }
 
     render () {
@@ -52,6 +57,7 @@ export default class Start extends React.Component {
                 <Link to="/resturantForm">
                     <img src={Icon} className="newCafeBtn"/>
                 </Link>
+                <Button className="logOut" type="button" onClick={(event)=> this.handleLogOut(event)}>Log Out</Button>
                 <ul className="Locations">
                 {
                     this.state.resturants.map((resturant)=> {
@@ -63,7 +69,7 @@ export default class Start extends React.Component {
                                     address={resturant.address}
                                     comment={resturant.comment}
                                 />
-                                  <Button className="deleteBtn"type="submit" onClick={(event)=> this.handleDelete(event)}>delete</Button>
+                                  <Button className="deleteBtn"type="submit" value={resturant._id} onClick={(event)=> this.handleDelete(event)}>delete</Button>
                             </li>
                             )
                         }) 
