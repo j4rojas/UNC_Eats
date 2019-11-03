@@ -84,7 +84,7 @@ router.get('/resturant',(req,res)=> {
         });
 });
 
-router.post('/new/:token', cors(), (req, res) => {  
+router.post('/new/:token', cors(),(req, res) => {  
     verifyToken(req, res);
     console.log(req.body);
     const requiredFields = ['title', 'address','comment'];
