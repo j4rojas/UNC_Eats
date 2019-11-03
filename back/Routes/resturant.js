@@ -112,7 +112,7 @@ router.post('/new/:token', cors(), (req, res) => {
 });
 
 router.delete('/one/:id/:token',cors(),(req,res)=> {
-    resturant
+    Resturant
         .findByIdAndRemove(req.params.id)
         .then(() => {
             res.status(204).end();
