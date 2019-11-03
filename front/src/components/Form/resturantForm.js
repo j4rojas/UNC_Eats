@@ -1,8 +1,9 @@
 import React from 'react';
 import './resturantForm.css';
+
 import Button from 'react-bootstrap/Button';
 
-export default class newResturantForm extends React.Component {
+export default class newForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -42,7 +43,6 @@ export default class newResturantForm extends React.Component {
             },
             body:JSON.stringify(this.state)
         }) 
-        // need to create token or might be part of the public view 
             .then((rep)=>{return rep.json()})
             .then((res) => {console.log(res)
                 this.props.history.push('/start');
@@ -54,9 +54,8 @@ export default class newResturantForm extends React.Component {
         return (
             <form className="newForm" onSubmit={(event)=> this.handleSubmit(event)}>
                 <div className="container">
-                    <h1 class="cafeTitle">Enter new Resturant/Cafe</h1>
+                    <h1 class="cafeTitle">Enter new /Cafe</h1>
                     <input type="text" className="placeName" placeholder="Name of Place" name="title" required onChange={(event)=> this.handleChange(event)}/>
-                    
                     <p><label for="picture" className="picture">Upload a picture:</label></p>
                     <input type="file" className="NewImage" accept="image/png, image/jpeg" name="CafeImage" onChange={(event)=> this.handleFileSelect(event)}/>           
                     <input type="text" className="address" placeholder="Address" name="address" required onChange={(event)=> this.handleChange(event)}/>
@@ -67,4 +66,3 @@ export default class newResturantForm extends React.Component {
         );
     }
 }
-
