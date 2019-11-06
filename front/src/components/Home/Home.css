@@ -28,10 +28,8 @@ h3 {
 .location-wrapper {
     background: white;
     border: 1px solid black;
-    margin: 3% 3%;
-    padding: 20px;
+    margin: 3% 4.5%;
     min-width: 330px;
-    width:5%;
     border-radius: 4px;
     position:relative;
     display:inline-block;
@@ -139,9 +137,9 @@ h3 {
   and (min-width: 1440px) {
     .loginBtn.btn.btn-primary {
         margin: -5.3% -19%;
-        width: 9%;
-        height:5.5%;
-        font-size:25px;
+        width: 8%;
+        height:4.5%;
+        font-size:18px;
     }
     .UNC {
         height:35%;
