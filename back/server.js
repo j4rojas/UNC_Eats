@@ -11,7 +11,7 @@ const UserRoute = require('./Routes/user');
 const ResturantRoute = require('./Routes/resturant');
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser({limit: '50mb'}));
 app.use(express.json());
 app.use('/resturant', ResturantRoute);
 app.use('/user', UserRoute);
