@@ -44,7 +44,6 @@ export default class Start extends React.Component {
     }
 
     handleLogOut(event) {
-        event.preventDefault();
         localStorage.removeItem('token');
         this.props.history.push('/');
     }
