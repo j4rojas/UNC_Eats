@@ -31,8 +31,13 @@ export default class LoginForm extends React.Component {
         })
         .then((rep)=>{return rep.json()})
         .then((res) => {console.log(res) 
+            if(res.error) {
+                alert(res.message);
+            }
+            else {
             localStorage.setItem('token', res.token);
             this.props.history.push('/start');
+            }
          
         })
         .catch((err)=>{console.log(err)})
