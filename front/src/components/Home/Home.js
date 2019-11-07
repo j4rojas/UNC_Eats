@@ -29,6 +29,7 @@ export default class Home extends React.Component {
         return(
             <div className="home-page">
                 <img src={UNC} class="UNC"/>
+                <p className="landingPage">Discover new cafes near UNC campus. Add new locations as you explore.</p>
                 <Button className="loginBtn" href="/LoginForm">Sign In</Button>
                 <ul className="Locations">
                     {
