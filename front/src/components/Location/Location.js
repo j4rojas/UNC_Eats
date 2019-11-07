@@ -18,7 +18,7 @@ export  class Location extends React.Component {
                 <ul className="locations">
                     <li className="CafeImage"><img src={this.props.CafeImage} width="170px"/></li>
                     <li>{this.props.address}</li>
-                    <li>{this.props.comment}</li>
+                    <li className="Comments">{this.props.comment}</li>
                 </ul>
             </div>
         );
