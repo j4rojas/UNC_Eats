@@ -1,8 +1,6 @@
 import React from 'react';
 import {shallow} from 'enzyme';
 import {Location} from './Location';
-import {Comments} from '../Comment/Comment';
-import {addComment} from '../../actions';
 
 describe('<Location/>', () => {
     const seedComments = [];
