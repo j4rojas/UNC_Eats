@@ -1,16 +1,18 @@
 import React from 'react';
 import {shallow} from 'enzyme';
+import Header from './Header';
 
-import Header from '../Header/Header';
-
-describe('<Header />', () => {
-    it('Renders without crashing', () => {
-        shallow(<Header text="Foo" />);
+describe('<Header/>', () => {
+    let seedHeader = [];
+    beforeAll(()=> {
+        for (let i = 0; i < 10; i++) {
+            seedHeader.push({
+                title: `Header ${i}`,
+            });
+        }
     });
-    
-    it('Renders the text', () => {
-        const text = 'Foo';
-        const wrapper = shallow(<Header text={text}/>);
-        expect(wrapper.text()).toEqual(text);
+    it('Renders without crashing', () => {
+        const dispatch = jest.fn();
+        shallow(<Header title="New Header"  dispatch={dispatch}/>);
     });
 });
