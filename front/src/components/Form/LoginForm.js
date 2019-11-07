@@ -58,6 +58,7 @@ export default class LoginForm extends React.Component {
                         onChange={(event)=> this.handleChange(event)}
                     />
                     <button type="submit" id="sigbtn">Login</button>
+                    <p className="demo">Username:demo Password:1234</p>
                     <p className="reg"><Link to="/regForm">Not Enrolled? Sign Up Now</Link></p>
                 </div>
             </form> 
