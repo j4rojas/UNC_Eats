@@ -43,8 +43,7 @@ export default class registrationForm extends React.Component {
                 return res.json();
             })  
             .then( (resJSON) => {console.log(resJSON)
-                // $('regpage').hide();
-               // $('loginPage').show();
+                this.props.history.push('/LoginForm');
             })
             .catch( (error) => {console.error(error)
             });
