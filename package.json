@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/j4rojas/UNC_Eats/issues"
   },
-  "homepage": "https://github.com/j4rojas/UNC_Eats#readme"
+  "homepage": "https://github.com/j4rojas/UNC_Eats#readme",
+  "dependencies": {
+    "react-test-renderer": "^16.11.0"
+  },
+  "devDependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1"
+  }
 }
